@@ -19,15 +19,10 @@ namespace GameBase2022
         internal int currentFrame;
         internal int numberOfFrames;
         
-        internal ImageContainer nextImage;
-
 
         internal ImageContainer()
         {
             isAnimated = false;
-            nextImage = null;
         }
-
-
     }
 }

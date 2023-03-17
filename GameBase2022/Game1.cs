@@ -18,13 +18,14 @@ namespace GameBase2022
         protected override void Initialize()
         {
 
-
+            GameManager.Initialize();
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             GameSystems.spriteBatch = new SpriteBatch(GraphicsDevice);
+            GameManager.LoadLevel(1);
 
         }
 
@@ -37,15 +38,19 @@ namespace GameBase2022
 
             EntityManager.Update(gameTime);
 
+            GameManager.Update(gameTime);
+
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
             GameSystems.spriteBatch.Begin();
 
             EntityManager.Draw(gameTime);
+            
             GameSystems.spriteBatch.End();
 
             base.Draw(gameTime);
