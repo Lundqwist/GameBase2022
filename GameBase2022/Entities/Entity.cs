@@ -24,7 +24,7 @@ namespace GameBase2022
 
         internal Entity nextEntity;
 
-        public Entity()
+        internal Entity()
         {
             isActive = true;
 

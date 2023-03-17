@@ -15,15 +15,15 @@ namespace GameBase2022
 
         static Entity firstEntity;
         static Entity lastEntity;
-        
-        static internal void Initialize()
+
+        internal static void Initialize()
         {
             entityNumber = 0;
             firstEntity = null;
             lastEntity = null;
         }
 
-        static internal void Update(GameTime gameTime)
+        internal static void Update(GameTime gameTime)
         {
 
             Entity stepEntity = firstEntity;
@@ -41,7 +41,7 @@ namespace GameBase2022
 
         }
 
-        static internal void Draw(GameTime gameTime)
+        internal static void Draw(GameTime gameTime)
         {
             Entity stepEntity = firstEntity;
 

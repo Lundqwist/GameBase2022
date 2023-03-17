@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,16 +8,21 @@ using System.Threading.Tasks;
 
 namespace GameBase2022
 {
-    public class ImageContainer
+    internal class ImageContainer
     {
-        public string imageName;
-        public Texture2D imageTexture;
-        public bool isAnimated;
+        internal string imageName;
+        internal Texture2D imageTexture;
 
-        ImageContainer nextImage;
+        internal bool isAnimated;
+        internal Vector2 frameSize; // storlek för en frame i animation.
+        internal int animationSpeed;
+        internal int currentFrame;
+        internal int numberOfFrames;
+        
+        internal ImageContainer nextImage;
 
 
-        public ImageContainer()
+        internal ImageContainer()
         {
             isAnimated = false;
             nextImage = null;

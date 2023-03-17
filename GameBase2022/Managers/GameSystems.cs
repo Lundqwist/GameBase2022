@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace GameBase2022
 {
-    static internal class GameSystems
+    internal static class GameSystems
     {
-        static internal GraphicsDeviceManager graphicsDeviceManager;
-        static internal SpriteBatch spriteBatch;
+        internal static GraphicsDeviceManager graphicsDeviceManager;
+        internal static SpriteBatch spriteBatch;
         internal static void Initialize(Game1 game1)
         {
             graphicsDeviceManager = new GraphicsDeviceManager(game1);

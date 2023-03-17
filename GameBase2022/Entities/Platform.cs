@@ -28,7 +28,7 @@ namespace GameBase2022
 
 
 
-            base.Draw(gameTime);
+            
         }
 
 
